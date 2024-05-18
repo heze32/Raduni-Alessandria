@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carosello Immagini</title>
+<title>Raduni Alessandria</title>
 <style>
 .header {
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0); 
+  background-color: rgba(0, 0, 0, 0);
   position: absolute;
   right: 0;
   top: 0;
@@ -31,7 +31,7 @@
       bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 48px; 
+      font-size: 48px;
       color: #fff;
       text-shadow: 0 0 8px rgba(0,0,0,0.6);
       animation: bounce 2s infinite;
@@ -41,7 +41,7 @@
  .scroll-down::before {
       content: '';
       position: absolute;
-      top: -20px; 
+      top: -20px;
       left: 50%;
       transform: translateX(-50%);
       width: 60px;
@@ -127,17 +127,20 @@
 <div class="header">
   <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
   <a href="#contatti" class="nav-link">Contatti</a>
+
 </div>
 
 <div class="carousel">
   <img src="immagine1.jpg" alt="Immagine 1">
   <img src="immagine2.jpg" alt="Immagine 2">
-  <img src="immagine3.jpg" alt="Immagine 3"
+  <img src="immagine3.jpg" alt="Immagine 3">
+
 </div>
 
 <div class="info">
   <h1>Centro Informazioni</h1>
   <p>la lista dei raduni sarà caricata qui.</p>
+  
 <div class="card-container">
   <div class="card">
     <img src="categoria1.jpg" alt="Categoria 1">
@@ -154,7 +157,7 @@
     <h3>Istruzioni e regole</h3>
     <p>altre informazioni sui raduni e relative regole:</p>
     <div class="scroll-down">
-  &#x2193;
+  &#x2193; 
   </div>
 </div>
 
@@ -166,7 +169,7 @@
     index = (index + 1) % images.length;
     images[index].style.display = "block";
   }, 5000); 
-
+  
 function changeImage() {
   images[index].style.opacity = "0";
   setTimeout(() => {
@@ -177,7 +180,7 @@ function changeImage() {
   }, 1000); 
 }
 
-setInterval(changeImage, 5000); 
+setInterval(changeImage, 5000);
 
 </script>
 
