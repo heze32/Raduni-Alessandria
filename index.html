@@ -9,11 +9,11 @@
   display: flex;
   justify-content: flex-end;
   padding: 10px;
-  background-color: rgba(0, 0, 0, 0); /* Sfondo semi-trasparente */
+  background-color: rgba(0, 0, 0, 0); 
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 3; /* Assicurati che il header sia sopra le immagini */
+  z-index: 3;
 }
 
 .nav-link {
@@ -21,35 +21,35 @@
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  transition: color 0.3s ease; /* Transizione per il cambio di colore */
+  transition: color 0.3s ease; 
 }
 .nav-link:hover {
-  color: #017cff; /* Cambia colore al passaggio del cursore */
+  color: #017cff;
 }
 .scroll-down {
       position: absolute;
       bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
-      font-size: 48px; /* Dimensione più grande */
+      font-size: 48px; 
       color: #fff;
-      text-shadow: 0 0 8px rgba(0,0,0,0.6); /* Ombra per migliorare la leggibilità */
+      text-shadow: 0 0 8px rgba(0,0,0,0.6);
       animation: bounce 2s infinite;
-      z-index: 10; /* Assicurati che sia sopra le immagini */
+      z-index: 10;
       pointer-events: none;
 }
  .scroll-down::before {
       content: '';
       position: absolute;
-      top: -20px; /* Centrare rispetto alla freccia */
+      top: -20px; 
       left: 50%;
       transform: translateX(-50%);
-      width: 60px; /* Larghezza del cerchio di sfondo */
-      height: 60px; /* Altezza del cerchio di sfondo */
-      background-color: #000; /* Colore di sfondo */
+      width: 60px;
+      height: 60px;
+      background-color: #000;
       border-radius: 50%;
-      opacity: 0.5; /* Trasparenza per vedere le immagini sotto */
-      z-index: -1; /* Sotto la freccia */
+      opacity: 0.5;
+      z-index: -1;
     }
 
 
@@ -127,20 +127,17 @@
 <div class="header">
   <a href="#chi-siamo" class="nav-link">Chi Siamo</a>
   <a href="#contatti" class="nav-link">Contatti</a>
-  <!-- Aggiungi altri link se necessario -->
 </div>
 
 <div class="carousel">
   <img src="immagine1.jpg" alt="Immagine 1">
   <img src="immagine2.jpg" alt="Immagine 2">
-  <img src="immagine3.jpg" alt="Immagine 3">
-  <!-- Aggiungi altre immagini se necessario -->
+  <img src="immagine3.jpg" alt="Immagine 3"
 </div>
 
 <div class="info">
   <h1>Centro Informazioni</h1>
   <p>la lista dei raduni sarà caricata qui.</p>
-  <!-- Aggiungi altre informazioni o istruzioni qui -->
 <div class="card-container">
   <div class="card">
     <img src="categoria1.jpg" alt="Categoria 1">
@@ -157,7 +154,7 @@
     <h3>Istruzioni e regole</h3>
     <p>altre informazioni sui raduni e relative regole:</p>
     <div class="scroll-down">
-  &#x2193; <!-- Codice HTML per la freccia verso il basso -->
+  &#x2193;
   </div>
 </div>
 
@@ -168,10 +165,8 @@
     images[index].style.display = "none";
     index = (index + 1) % images.length;
     images[index].style.display = "block";
-  }, 5000); // Cambia immagine ogni 3 secondi
-  /* Resto del JavaScript... */
+  }, 5000); 
 
-// Funzione per cambiare immagine con crossfade
 function changeImage() {
   images[index].style.opacity = "0";
   setTimeout(() => {
@@ -179,10 +174,10 @@ function changeImage() {
     index = (index + 1) % images.length;
     images[index].style.display = "block";
     images[index].style.opacity = "1";
-  }, 1000); // Attesa di 1 secondo per il crossfade
+  }, 1000); 
 }
 
-setInterval(changeImage, 5000); // Cambia immagine ogni 3 secondi con crossfade
+setInterval(changeImage, 5000); 
 
 </script>
 
