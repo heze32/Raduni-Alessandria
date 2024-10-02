@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raduni Alessandria</title>
+<style>
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0); /* Sfondo semi-trasparente */
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3; /* Assicurati che il header sia sopra le immagini */
+}
+
+.nav-link {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Transizione per il cambio di colore */
+}
+.nav-link:hover {
+  color: #017cff; /* Cambia colore al passaggio del cursore */
+}
+.scroll-down {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 48px; /* Dimensione più grande */
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6); /* Ombra per migliorare la leggibilità */
+  animation: bounce 2s infinite;
+  z-index: 10; /* Assicurati che sia sopra le immagini */
+  pointer-events: none;
+}
+.scroll-down::before {
+  content: '';
+  position: absolute;
+  top: -20px; /* Centrare rispetto alla freccia */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px; /* Larghezza del cerchio di sfondo */
+  height: 60px; /* Altezza del cerchio di sfondo */
+  background-color: #000; /* Colore di sfondo */
+  border-radius: 50%;
+  opacity: 0.5; /* Trasparenza per vedere le immagini sotto */
+  z-index: -1; /* Sotto la freccia */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+}
+
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 1400px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  animation: slide 10s infinite;
+}
+
+.carousel img:first-child {
+  display: block;
+}
+
+@keyframes slide {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #f3f3f3;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin-top: 15px;
+}
+
+.card p {
+  font-size: 14px;
+}
+
+/* Aggiungi un effetto di sfondo animato al titolo principale */
+.info h1 {
+  position: relative;
+  color: transparent;
+  animation: text-reveal 3s infinite;
+  background-image: linear-gradient(90deg, #f3a683, #786fa6, #574b90);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+@keyframes text-reveal {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Aggiungi un effetto di "respiro" al pulsante di scroll-down */
+.scroll-down {
+  animation: breath-animation 2s ease-out infinite normal;
+}
+
+@keyframes breath-animation {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.05); }
+  60% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <a href="chi siamo.html" class="nav-link">Chi Siamo</a>
+  <a href="ticket.html" class="nav-link">Ticket</a>
+  <!-- Aggiungi altri link se necessario -->
+</div>
+
+<div class="carousel">
+  <img src="immagine1.jpg" alt="Immagine 1">
+  <img src="immagine2.jpg" alt="Immagine 2">
+  <img src="immagine3.jpg" alt="Immagine 3">
+  <!-- Aggiungi altre immagini se necessario -->
+</div>
+
+<div class="info">
+  <h1>Centro Informazioni</h1>
+  <p>la lista dei raduni sarà caricata qui.</p>
+  <!-- Aggiungi altre informazioni o istruzioni qui -->
+</div>
+
+<div class="card-container">
+  <div class="card">
+    <img src="categoria1.jpg" alt="Categoria 1">
+    <h3>Alessandria</h3>
+    <p>Tutti i raduni disponibili ad Alessandria:</p>
+  </div>
+  <div class="card">
+    <img src="categoria2.jpg" alt="Categoria 2">
+    <h3>Consiglia anche tu un posto per i raduni nella nostra email</h3>
+    <p>Tutti i raduni disponibili in città consigliate dagli utilizzatori di questo sito.</p>
+  </div>
+  <div class="card">
+    <img src="categoria3.jpg" alt="Categoria 3">
+    <h3>Istruzioni e regole</h3>
+    <p>altre informazioni sui raduni e relative regole:</p>
+  </div>
+</div>
+
+<div class="scroll-down">
+  ↓ <!-- Codice HTML per la freccia verso il basso -->
+</div>
+
+<script>
+  let index = 0;
+  const images = document.querySelectorAll(".carousel img");
+  setInterval(() => {
+    images[index].style.display = "none";
+    index = (index + 1) % images.length;
+    images[index].style.display = "block";
+  }, 5000); // Cambia immagine ogni 5 secondi
+
+  // Funzione per cambiare immagine con crossfade
+  function changeImage() {
+    images[index].style.opacity = "0";
+    setTimeout(() => {
+      images[index].style.display = "none";
+      index = (index + 1) % images.length;
+      images[index].style.display = "block";
+      images[index].style.opacity = "1";
+    }, 1000); // Attesa di 1 secondo per il crossfade
+  }
+
+  setInterval(changeImage, 5000); // Cambia immagine ogni 5 secondi con crossfade
+</script>
+
+</body>
+</html>

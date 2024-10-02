@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagina di Contatti</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    transform: scale(0);
+    animation: scaleIn 0.5s forwards;
+  }
+  h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact-form * {
+    outline: none;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+  }
+  .contact-form *:focus {
+    border-color: #74ebd5;
+  }
+  .contact-form button {
+    cursor: pointer;
+    background-color: #74ebd5;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+  }
+  .contact-form button:hover {
+    background-color: #68d8c8;
+  }
+  @keyframes scaleIn {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h2>Contattaci</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Nome" required>
+    <input type="email" placeholder="Email" required>
+    <textarea placeholder="Messaggio" rows="4" required></textarea>
+    <button type="submit">Invia</button>
+  </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chi Siamo</title>
+<style>
+  body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Times New Roman', serif; /* Aggiunge un font personalizzato */
+    background: url('boh.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  .about-section {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* Rende il testo bianco */
+  }
+  .about-section h2 {
+    font-size: 48px;
+    animation: fadeInUp 2s;
+  }
+  .about-section p {
+    font-size: 24px;
+    animation: fadeIn 3s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<div class="about-section">
+  <div>
+    <h2>Chi Siamo</h2>
+    <p>Siamo una squadra di appassionati di motociclismo pronti a far divertire il maggior numero di persone possibili attraverso i raduni organizzati.</p>
+  </div>
+</div>
+
+</body>
+</html>
+
